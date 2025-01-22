@@ -1,0 +1,94 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, green, black);
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.form-container {
+  background-color: grey;
+  padding: 60px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  width: 350px;
+  text-align: center;
+}
+
+.form h2 {
+  margin-bottom: 20px;
+  color: black;
+  font-size: 54px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: black;
+  font-size: 14px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #000000;
+  border: none;
+  border-radius: 4px;
+  color: #6fff00;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  color-scheme: #e46969;
+  background-color:#96ce95;
+}
+
+p {
+  margin-top: 20px;
+  color: black;
+  font-size: 14px;
+}
+
+p a {
+  color: black;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+p a:hover {
+  color: #000fe0;
+}
+
+.spotify-logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 200px;
+  height: auto;
+}
+
+@keyframes flicker {
+  0%, 100% { background-color: transparent; }
+  50% { background-color: red; }
+}
+
+.flicker {
+  animation: flicker 0.2s 3;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="register.css" />
+  <title>Register -Spotify Clone</title>
+</head>
+
+<body>
+  <div class="form-container">
+    <form class="form" onsubmit="return registerUser()">
+      <h2>Register</h2>
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required />
+      </div>
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required />
+      </div>
+      <button type="submit">Register</button>
+      <p>Already have an account? <a href="login.html">Login</a></p>
+    </form>
+  </div>
+  <img src="Assets/Spotify-Black-Logo.wine.svg" alt="Spotify Logo" class="spotify-logo" />
+  <script>
+    function registerUser() {
+      const username = document.getElementById('username').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const users = JSON.parse(localStorage.getItem('users')) || [];
+      users.push({ username, email, password });
+      localStorage.setItem('users', JSON.stringify(users));
+      alert('Registration successful');
+      location.href = 'login.html';
+      return false;
+    }
+  </script>
+</body>
+
+</html>
