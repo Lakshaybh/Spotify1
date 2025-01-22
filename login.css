@@ -3,7 +3,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(to bottom, rgb(152, 221, 152), black);
+  background: linear-gradient(to bottom, rgb(156, 236, 156), black);
   margin: 0;
   font-family: "Montserrat", sans-serif;
 }
